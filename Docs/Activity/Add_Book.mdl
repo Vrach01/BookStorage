@@ -80,99 +80,120 @@
 	global     	TRUE
 	logical_models 	(list unit_reference_list)
 	statemachine 	(object State_Machine "State/Activity Model"
-	    quid       	"5BCFA7630063"
+	    quid       	"5BD0BA4C014A"
 	    states     	(list States
 		(object State "$UNNAMED$0"
-		    quid       	"5BCFA80502DB"
-		    type       	"EndState")
-		(object State "$UNNAMED$1"
-		    quid       	"5BCFA807027D"
+		    quid       	"5BD0BAFB0049"
 		    type       	"StartState")
-		(object State "Show add window"
-		    quid       	"5BCFA8AD0193"
-		    type       	"Normal")
+		(object State "$UNNAMED$1"
+		    quid       	"5BD0BAFC03D7"
+		    type       	"EndState")
 		(object State "Input Data"
-		    quid       	"5BCFA8BF020E"
+		    quid       	"5BD0BB01003D"
 		    type       	"Normal")
-		(object ActivityState "NewActivity"
-		    quid       	"5BCFA8C003B9")
-		(object ActivityState "Any matches"
-		    quid       	"5BCFA93D019D")
+		(object ActivityState "Any Matches"
+		    quid       	"5BD0BB1800D7")
 		(object Decision "$UNNAMED$2"
-		    quid       	"5BCFA9610021")
-		(object State "Create a new book"
-		    quid       	"5BCFAA0A014D"
+		    quid       	"5BD0BB7001A7")
+		(object ActivityState "Is there a signification"
+		    quid       	"5BD0BBB90353")
+		(object Decision "$UNNAMED$3"
+		    quid       	"5BD0BBE300FE")
+		(object State "Add signification to book"
+		    quid       	"5BD0BC1A0377"
 		    type       	"Normal"))
 	    partitions 	(list Partitions)
 	    objects    	(list Objects)
 	    transitions 	(list transition_list
 		(object State_Transition
-		    quid       	"5BCFA98E0352"
-		    supplier   	"Use Case View::State/Activity Model::Show add window"
-		    supplier_quidu 	"5BCFA8AD0193"
-		    client     	"$UNNAMED$1"
-		    client_quidu 	"5BCFA807027D"
-		    sendEvent  	(object sendEvent
-			quid       	"5BCFA98E0355"))
-		(object State_Transition
-		    quid       	"5BCFA992029F"
-		    supplier   	"Use Case View::State/Activity Model::Input Data"
-		    supplier_quidu 	"5BCFA8BF020E"
-		    client     	"Use Case View::State/Activity Model::Show add window"
-		    client_quidu 	"5BCFA8AD0193"
-		    sendEvent  	(object sendEvent
-			quid       	"5BCFA99202A2"))
-		(object State_Transition
-		    quid       	"5BCFA99501AD"
-		    supplier   	"Use Case View::State/Activity Model::Any matches"
-		    supplier_quidu 	"5BCFA93D019D"
-		    client     	"Use Case View::State/Activity Model::Input Data"
-		    client_quidu 	"5BCFA8BF020E"
-		    sendEvent  	(object sendEvent
-			quid       	"5BCFA99501B0"))
-		(object State_Transition
-		    quid       	"5BCFA99703CE"
-		    supplier   	"$UNNAMED$2"
-		    supplier_quidu 	"5BCFA9610021"
-		    client     	"Use Case View::State/Activity Model::Any matches"
-		    client_quidu 	"5BCFA93D019D"
-		    sendEvent  	(object sendEvent
-			quid       	"5BCFA99703D1"))
-		(object State_Transition
-		    quid       	"5BCFA9BE0205"
+		    quid       	"5BD0BB8A0325"
 		    label      	""
 		    supplier   	"Use Case View::State/Activity Model::Input Data"
-		    supplier_quidu 	"5BCFA8BF020E"
+		    supplier_quidu 	"5BD0BB01003D"
 		    client     	"$UNNAMED$2"
-		    client_quidu 	"5BCFA9610021"
+		    client_quidu 	"5BD0BB7001A7"
 		    Event      	(object Event "Yes"
-			quid       	"5BCFAF4C0161")
+			quid       	"5BD0BB8A0326")
 		    sendEvent  	(object sendEvent
-			quid       	"5BCFA9BE0208"))
+			quid       	"5BD0BB8A0328"))
 		(object State_Transition
-		    quid       	"5BCFAA2A01BD"
+		    quid       	"5BD0BBAD018C"
+		    supplier   	"Use Case View::State/Activity Model::Input Data"
+		    supplier_quidu 	"5BD0BB01003D"
+		    client     	"$UNNAMED$0"
+		    client_quidu 	"5BD0BAFB0049"
+		    sendEvent  	(object sendEvent
+			quid       	"5BD0BBAD018F"))
+		(object State_Transition
+		    quid       	"5BD0BBB00358"
+		    supplier   	"Use Case View::State/Activity Model::Any Matches"
+		    supplier_quidu 	"5BD0BB1800D7"
+		    client     	"Use Case View::State/Activity Model::Input Data"
+		    client_quidu 	"5BD0BB01003D"
+		    sendEvent  	(object sendEvent
+			quid       	"5BD0BBB0035B"))
+		(object State_Transition
+		    quid       	"5BD0BBB30309"
+		    supplier   	"$UNNAMED$2"
+		    supplier_quidu 	"5BD0BB7001A7"
+		    client     	"Use Case View::State/Activity Model::Any Matches"
+		    client_quidu 	"5BD0BB1800D7"
+		    sendEvent  	(object sendEvent
+			quid       	"5BD0BBB3030C"))
+		(object State_Transition
+		    quid       	"5BD0BC03025A"
 		    label      	""
-		    supplier   	"Use Case View::State/Activity Model::Create a new book"
-		    supplier_quidu 	"5BCFAA0A014D"
+		    supplier   	"Use Case View::State/Activity Model::Is there a signification"
+		    supplier_quidu 	"5BD0BBB90353"
 		    client     	"$UNNAMED$2"
-		    client_quidu 	"5BCFA9610021"
+		    client_quidu 	"5BD0BB7001A7"
 		    Event      	(object Event "No"
-			quid       	"5BCFAF4C0167")
+			quid       	"5BD0BC03025B")
 		    sendEvent  	(object sendEvent
-			quid       	"5BCFAA2A01C0"))
+			quid       	"5BD0BC03025D"))
 		(object State_Transition
-		    quid       	"5BCFAA2E0396"
-		    supplier   	"$UNNAMED$0"
-		    supplier_quidu 	"5BCFA80502DB"
-		    client     	"Use Case View::State/Activity Model::Create a new book"
-		    client_quidu 	"5BCFAA0A014D"
+		    quid       	"5BD0BC0F01BA"
+		    supplier   	"$UNNAMED$3"
+		    supplier_quidu 	"5BD0BBE300FE"
+		    client     	"Use Case View::State/Activity Model::Is there a signification"
+		    client_quidu 	"5BD0BBB90353"
 		    sendEvent  	(object sendEvent
-			quid       	"5BCFAA2E0399")))
+			quid       	"5BD0BC0F01BD"))
+		(object State_Transition
+		    quid       	"5BD0BC38034B"
+		    label      	""
+		    supplier   	"$UNNAMED$1"
+		    supplier_quidu 	"5BD0BAFC03D7"
+		    client     	"$UNNAMED$3"
+		    client_quidu 	"5BD0BBE300FE"
+		    Event      	(object Event "No"
+			quid       	"5BD0BC38034C")
+		    sendEvent  	(object sendEvent
+			quid       	"5BD0BC38034E"))
+		(object State_Transition
+		    quid       	"5BD0BC820133"
+		    label      	""
+		    supplier   	"Use Case View::State/Activity Model::Add signification to book"
+		    supplier_quidu 	"5BD0BC1A0377"
+		    client     	"$UNNAMED$3"
+		    client_quidu 	"5BD0BBE300FE"
+		    Event      	(object Event "Yes"
+			quid       	"5BD0BC820134")
+		    sendEvent  	(object sendEvent
+			quid       	"5BD0BC820136"))
+		(object State_Transition
+		    quid       	"5BD0BC88037A"
+		    supplier   	"$UNNAMED$1"
+		    supplier_quidu 	"5BD0BAFC03D7"
+		    client     	"Use Case View::State/Activity Model::Add signification to book"
+		    client_quidu 	"5BD0BC1A0377"
+		    sendEvent  	(object sendEvent
+			quid       	"5BD0BC88037D")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
-		(object ActivityDiagram "ActivityDiagram"
-		    quid       	"5BCFA763006D"
-		    title      	"ActivityDiagram"
+		(object ActivityDiagram "Add_Book"
+		    quid       	"5BD0BA4C0156"
+		    title      	"Add_Book"
 		    zoom       	100
 		    max_height 	28350
 		    max_width  	21600
@@ -182,23 +203,23 @@
 			(object Swimlane "" @1
 			    line_color 	3342489
 			    width      	450)
-			(object StateView "EndState" "$UNNAMED$0" @2
+			(object StateView "StartState" "$UNNAMED$0" @2
 			    Parent_View 	@1
-			    location   	(1184, 1824)
+			    location   	(1200, 112)
 			    icon_style 	"Icon"
 			    line_color 	3342489
-			    quidu      	"5BCFA80502DB"
+			    quidu      	"5BD0BAFB0049"
 			    autoResize 	TRUE)
-			(object StateView "StartState" "$UNNAMED$1" @3
+			(object StateView "EndState" "$UNNAMED$1" @3
 			    Parent_View 	@1
-			    location   	(1184, 80)
+			    location   	(1200, 2384)
 			    icon_style 	"Icon"
 			    line_color 	3342489
-			    quidu      	"5BCFA807027D"
+			    quidu      	"5BD0BAFC03D7"
 			    autoResize 	TRUE)
-			(object StateView "Normal" "Show add window" @4
+			(object StateView "Normal" "Input Data" @4
 			    Parent_View 	@1
-			    location   	(1184, 416)
+			    location   	(1200, 448)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -211,34 +232,34 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@4
-				location   	(1184, 400)
+				location   	(1200, 436)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
-				max_width  	436
+				max_width  	504
 				justify    	0
-				label      	"Show add window")
+				label      	"Input Data")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5BCFA8AD0193"
-			    width      	532
-			    height     	144
+			    quidu      	"5BD0BB01003D"
+			    width      	600
+			    height     	137
 			    autoResize 	TRUE)
 			(object TransView "" @5
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5BCFA98E0352"
-			    client     	@3
+			    quidu      	"5BD0BBAD018C"
+			    client     	@2
 			    supplier   	@4
 			    vertices   	(list Points
-				(1184, 110)
-				(1184, 344))
+				(1200, 142)
+				(1200, 380))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object StateView "Normal" "Input Data" @6
+			(object ActivityStateView "Any Matches" @6
 			    Parent_View 	@1
-			    location   	(1184, 672)
+			    location   	(1200, 784)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -251,75 +272,43 @@
 				default_color 	TRUE)
 			    label      	(object ItemLabel
 				Parent_View 	@6
-				location   	(1184, 663)
+				location   	(1200, 787)
 				fill_color 	13434879
 				anchor_loc 	1
 				nlines     	2
-				max_width  	434
+				max_width  	532
 				justify    	0
-				label      	"Input Data")
+				label      	"Any Matches")
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5BCFA8BF020E"
-			    width      	531
-			    height     	131
+			    quidu      	"5BD0BB1800D7"
+			    width      	638
+			    height     	106
+			    annotation 	1
 			    autoResize 	TRUE)
 			(object TransView "" @7
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5BCFA992029F"
+			    quidu      	"5BD0BBB00358"
 			    client     	@4
 			    supplier   	@6
 			    vertices   	(list Points
-				(1184, 488)
-				(1184, 607))
+				(1200, 516)
+				(1200, 731))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object ActivityStateView "Any matches" @8
+			(object DecisionView "$UNNAMED$2" @8
 			    Parent_View 	@1
-			    location   	(1184, 976)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				charSet    	204
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@8
-				location   	(1184, 973)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	436
-				justify    	0
-				label      	"Any matches")
+			    location   	(1200, 1072)
 			    icon_style 	"Icon"
 			    line_color 	3342489
 			    fill_color 	13434879
-			    quidu      	"5BCFA93D019D"
-			    width      	550
+			    quidu      	"5BD0BB7001A7"
+			    width      	600
 			    height     	119
-			    annotation 	1
 			    autoResize 	TRUE)
 			(object TransView "" @9
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5BCFA99501AD"
-			    client     	@6
-			    supplier   	@8
-			    vertices   	(list Points
-				(1184, 737)
-				(1184, 917))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object StateView "Normal" "Create a new book" @10
-			    Parent_View 	@1
-			    location   	(1184, 1504)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -330,68 +319,9 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    label      	(object ItemLabel
-				Parent_View 	@10
-				location   	(1184, 1485)
-				fill_color 	13434879
-				anchor_loc 	1
-				nlines     	2
-				max_width  	454
-				justify    	0
-				label      	"Create a new book")
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5BCFAA0A014D"
-			    width      	550
-			    height     	150
-			    autoResize 	TRUE)
-			(object TransView "" @11
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5BCFAA2E0396"
-			    client     	@10
-			    supplier   	@2
-			    vertices   	(list Points
-				(1184, 1579)
-				(1184, 1782))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object DecisionView "$UNNAMED$2" @12
-			    Parent_View 	@1
-			    location   	(1184, 1216)
-			    icon_style 	"Icon"
-			    line_color 	3342489
-			    fill_color 	13434879
-			    quidu      	"5BCFA9610021"
-			    width      	531
-			    height     	138
-			    autoResize 	TRUE)
-			(object TransView "" @13
-			    stereotype 	TRUE
-			    line_color 	3342489
-			    quidu      	"5BCFA99703CE"
-			    client     	@8
-			    supplier   	@12
-			    vertices   	(list Points
-				(1184, 1036)
-				(1184, 1147))
-			    line_style 	0
-			    x_offset   	FALSE)
-			(object TransView "" @14
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				charSet    	204
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    label      	(object SegLabel @15
-				Parent_View 	@14
-				location   	(927, 1166)
+			    label      	(object SegLabel @10
+				Parent_View 	@9
+				location   	(938, 1017)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -407,22 +337,35 @@
 				max_width  	450
 				justify    	0
 				label      	"Yes"
-				pctDist    	-0.043243
-				height     	50
+				pctDist    	-0.028133
+				height     	56
 				orientation 	1)
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5BCFA9BE0205"
-			    client     	@12
-			    supplier   	@6
+			    quidu      	"5BD0BB8A0325"
+			    client     	@8
+			    supplier   	@4
 			    vertices   	(list Points
-				(919, 1216)
-				(734, 1216)
-				(734, 672)
-				(919, 672))
+				(900, 1072)
+				(509, 1072)
+				(509, 447)
+				(900, 447))
 			    line_style 	0
 			    x_offset   	FALSE)
-			(object TransView "" @16
+			(object TransView "" @11
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5BD0BBB30309"
+			    client     	@6
+			    supplier   	@8
+			    vertices   	(list Points
+				(1200, 837)
+				(1200, 1013))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "Is there a signification" @12
+			    Parent_View 	@1
+			    location   	(1200, 1392)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -433,9 +376,37 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    label      	(object SegLabel @17
-				Parent_View 	@16
-				location   	(1244, 1307)
+			    label      	(object ItemLabel
+				Parent_View 	@12
+				location   	(1200, 1392)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	527
+				justify    	0
+				label      	"Is there a signification")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5BD0BBB90353"
+			    width      	637
+			    height     	112
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @13
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @14
+				Parent_View 	@13
+				location   	(1261, 1170)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -451,17 +422,164 @@
 				max_width  	450
 				justify    	0
 				label      	"No"
-				pctDist    	0.152778
-				height     	60
+				pctDist    	0.190244
+				height     	61
 				orientation 	0)
 			    stereotype 	TRUE
 			    line_color 	3342489
-			    quidu      	"5BCFAA2A01BD"
-			    client     	@12
-			    supplier   	@10
+			    quidu      	"5BD0BC03025A"
+			    client     	@8
+			    supplier   	@12
 			    vertices   	(list Points
-				(1184, 1285)
-				(1184, 1429))
+				(1200, 1131)
+				(1200, 1336))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "$UNNAMED$3" @15
+			    Parent_View 	@1
+			    location   	(1200, 1680)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5BD0BBE300FE"
+			    width      	594
+			    height     	131
+			    autoResize 	TRUE)
+			(object TransView "" @16
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5BD0BC0F01BA"
+			    client     	@12
+			    supplier   	@15
+			    vertices   	(list Points
+				(1200, 1448)
+				(1200, 1615))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Add signification to book" @17
+			    Parent_View 	@1
+			    location   	(1200, 2032)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@17
+				location   	(1200, 2023)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	534
+				justify    	0
+				label      	"Add signification to book")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5BD0BC1A0377"
+			    width      	630
+			    height     	130
+			    autoResize 	TRUE)
+			(object TransView "" @18
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5BD0BC88037A"
+			    client     	@17
+			    supplier   	@3
+			    vertices   	(list Points
+				(1200, 2097)
+				(1200, 2342))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @19
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(904, 1613)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"No"
+				pctDist    	-0.004521
+				height     	67
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5BD0BC38034B"
+			    client     	@15
+			    supplier   	@3
+			    vertices   	(list Points
+				(903, 1680)
+				(525, 1684)
+				(525, 2374)
+				(1158, 2383))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @21
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(1277, 1794)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	"Yes"
+				pctDist    	0.220721
+				height     	77
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5BD0BC820133"
+			    client     	@15
+			    supplier   	@17
+			    vertices   	(list Points
+				(1200, 1745)
+				(1200, 1967))
 			    line_style 	0
 			    x_offset   	FALSE)))))
 	logical_presentations 	(list unit_reference_list
@@ -506,7 +624,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Logical View::java" @18
+		    (object CategoryView "Logical View::java" @23
 			location   	(208, 272)
 			font       	(object Font
 			    size       	10
@@ -519,7 +637,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@18
+			    Parent_View 	@23
 			    location   	(64, 188)
 			    nlines     	2
 			    max_width  	288
@@ -531,7 +649,7 @@
 			quidu      	"39C92661003B"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::javax" @19
+		    (object CategoryView "Logical View::javax" @24
 			location   	(656, 272)
 			font       	(object Font
 			    size       	10
@@ -544,7 +662,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@19
+			    Parent_View 	@24
 			    location   	(512, 188)
 			    nlines     	2
 			    max_width  	288
@@ -556,7 +674,7 @@
 			quidu      	"39C926610018"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::org" @20
+		    (object CategoryView "Logical View::org" @25
 			location   	(1104, 272)
 			font       	(object Font
 			    size       	10
@@ -569,7 +687,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@20
+			    Parent_View 	@25
 			    location   	(960, 188)
 			    nlines     	2
 			    max_width  	288
@@ -590,7 +708,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @21
+		    (object NoteView @26
 			location   	(224, 624)
 			font       	(object Font
 			    size       	10
@@ -606,7 +724,7 @@
 			fill_color 	12632256
 			width      	300
 			height     	132)
-		    (object NoteView @22
+		    (object NoteView @27
 			location   	(704, 624)
 			font       	(object Font
 			    size       	10
@@ -622,7 +740,7 @@
 			fill_color 	8421631
 			width      	300
 			height     	132)
-		    (object NoteView @23
+		    (object NoteView @28
 			location   	(1200, 624)
 			font       	(object Font
 			    size       	10
@@ -638,7 +756,7 @@
 			fill_color 	12615680
 			width      	300
 			height     	132)
-		    (object NoteView @24
+		    (object NoteView @29
 			location   	(1664, 624)
 			font       	(object Font
 			    size       	10
@@ -654,7 +772,7 @@
 			fill_color 	16777215
 			width      	300
 			height     	132)
-		    (object Label @25
+		    (object Label @30
 			location   	(81, 369)
 			font       	(object Font
 			    size       	12
@@ -670,7 +788,7 @@
 			max_width  	1163
 			justify    	1
 			label      	"J2EE: Java 2 Platform, Enterprise Edition - v 1.2.1")
-		    (object Label @26
+		    (object Label @31
 			location   	(96, 608)
 			font       	(object Font
 			    size       	10
@@ -686,7 +804,7 @@
 			max_width  	268
 			justify    	1
 			label      	"Abstract Class")
-		    (object Label @27
+		    (object Label @32
 			location   	(592, 608)
 			font       	(object Font
 			    size       	10
@@ -702,7 +820,7 @@
 			max_width  	225
 			justify    	1
 			label      	"Final Class")
-		    (object Label @28
+		    (object Label @33
 			location   	(1104, 608)
 			font       	(object Font
 			    size       	10
@@ -718,7 +836,7 @@
 			max_width  	206
 			justify    	1
 			label      	"Interface")
-		    (object Label @29
+		    (object Label @34
 			location   	(1552, 608)
 			font       	(object Font
 			    size       	10
@@ -763,7 +881,7 @@
 		origin_y   	0
 		items      	(list diagram_item_list)))
 	category   	"Logical View"
-	quidu      	"5BCFA5BA00AA")
+	quidu      	"5BD0BA31006B")
     process_structure 	(object Processes
 	quid       	"39C9260C00D8"
 	ProcsNDevs 	(list
