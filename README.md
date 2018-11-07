@@ -31,11 +31,20 @@ ____
  - Help - Открыть текстовое окно с пояснением работы приложения
  - About - Информация о программе.
   
+  ![mainwindow](https://user-images.githubusercontent.com/39530536/48152135-1e0e5500-e2d4-11e8-8075-6d147217b3ca.png)
+  
 ##### 2.2.2 Окно "New Book"
 
+
+![new book](https://user-images.githubusercontent.com/39530536/48152153-28305380-e2d4-11e8-92f4-92be915c1bd7.png)
+
 ##### 2.2.3 Окно Help 
+
+![help](https://user-images.githubusercontent.com/39530536/48152155-29fa1700-e2d4-11e8-9ebd-3ddfc6368a42.png)
  
 ##### 2.2.4 Окно About
+
+![about](https://user-images.githubusercontent.com/39530536/48152158-2b2b4400-e2d4-11e8-8eae-1b4698397458.png)
 
 ### 2.3 Классы пользователей
 ____
