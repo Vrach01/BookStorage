@@ -8,6 +8,5 @@ ____
 3) [Диаграммы последовательностей](https://github.com/Vrach01/BookStorage/blob/master/Docs/Sequence/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9.md)
 4) [Диаграммы состояний](https://github.com/Vrach01/BookStorage/tree/master/Docs/State)
 5) [Диаграмма классов](https://github.com/Vrach01/BookStorage/tree/master/Docs/ClassDiagram)
-6) [Диаграмма компонентов](https://github.com/Vrach01/BookStorage/tree/master/Docs/Component)
-7) [Диаграмма развёртывания](https://github.com/Vrach01/BookStorage/tree/master/Docs/Deployment)
+6) [Структурная диаграмма](https://github.com/Vrach01/BookStorage/tree/master/Docs/Deployment)
 
