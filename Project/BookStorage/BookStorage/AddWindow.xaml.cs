@@ -121,7 +121,7 @@ namespace BookStorage
                 }
             } catch (Exception ex)
             {
-
+                MessageBox.Show("Такая книга уже есть в каталоге!","Warning!",MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }
