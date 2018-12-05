@@ -1,0 +1,91 @@
+﻿<Window x:Class="BookStorage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStorage"
+        mc:Ignorable="d"
+        Title="BookStorage" Height="400" Width="700" ResizeMode="CanMinimize" MouseLeftButtonDown="Window_MouseLeftButtonDown" >
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="350*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <DockPanel>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="Help" Click="Help_Click"/>
+                    <MenuItem Header="About" Click="About_Click"/>
+                </Menu>
+                <StackPanel></StackPanel>
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150*" />
+                    <ColumnDefinition Width="450*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <Label x:Name="UserName" Content="UserName" HorizontalAlignment="Center"  />
+                    <ComboBox x:Name="UserNameBox" Width="125" HorizontalAlignment="Center">
+                        <ComboBoxItem Content="None" />
+                    </ComboBox>
+                    <Label x:Name="Genre" Content="Genre" HorizontalAlignment="Center" Margin="0,40,0,0"/>
+                    <ComboBox x:Name="GenreBox" Width="125" HorizontalAlignment="Center">
+                        <ComboBoxItem Content="Fantasy"/>
+                        <ComboBoxItem Content="Science fiction" />
+                        <ComboBoxItem Content="Historical" />
+                        <ComboBoxItem Content="Science" />
+                        <ComboBoxItem Content="Fairy tale" />
+                        <ComboBoxItem Content="Philosophy" />
+                        <ComboBoxItem Content="Western" />
+                        <ComboBoxItem Content="None" />
+
+                    </ComboBox>
+                    <Label x:Name="TimeAdd" Content="Added__ago" HorizontalAlignment="Center" Margin="0,40,0,0"/>
+                    <ComboBox x:Name="TimeBox" Width="125" HorizontalAlignment="Center" >
+                        <ComboBoxItem Content="a day" />
+                        <ComboBoxItem Content="a week" />
+                        <ComboBoxItem Content="a month" />
+                        <ComboBoxItem Content="very long" />
+                    </ComboBox>
+                    <Button x:Name="SearchButton" Content="Search" Width="100" HorizontalAlignment="Center" Margin="0,80,0,0" Click="SearchButton_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="390*" />
+                            <ColumnDefinition Width="60*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column = "0"  >
+                            <TextBox x:Name="SearchLine" HorizontalAlignment="Right" Width="200" Margin="0,0,10,0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column = "1" >
+                            <Image Source="Resources\Лупа.png" Width="20" Height="20" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </Grid>
+                    <ScrollViewer x:Name="ScrollList" VerticalScrollBarVisibility="Visible" Margin="0,20,5,0" Height="250">
+                        <ListBox x:Name="BookList" Height="250" SelectionChanged="BookList_SelectionChanged"/>
+                    </ScrollViewer>
+                    <Grid Margin="0,15,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="225*" />
+                            <ColumnDefinition Width="225*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <Button x:Name="AddButton" Content="Add..." Width="100" HorizontalAlignment="Center" Click="AddButton_Click"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <Button x:Name="DeleteButton" Content="Delete" Width="100" HorizontalAlignment="Center" IsEnabled="False"  Click="DeleteButton_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

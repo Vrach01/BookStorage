@@ -1,0 +1,69 @@
+﻿<Window x:Class="BookStorage.AddWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BookStorage"
+      mc:Ignorable="d" 
+      Height="300" Width="400"
+      Title="New Book" ResizeMode="NoResize" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*" />
+            <RowDefinition Height="200*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200*" />
+                    <ColumnDefinition Width="200*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" >
+                    <Label Name="BookName" Content="Book Name" HorizontalAlignment="Right" Margin="0,10,0,0"/>
+                    <Label Name="Signification" Content="Signification(not necessary)" HorizontalAlignment="Right" Margin="0,20,0,0" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" >
+                    <TextBox Name="BookNameBox" HorizontalAlignment="Center" Margin="0,13,0,0" Width="150"/>
+                    <TextBox Name="SignificationBox" HorizontalAlignment="Center" Margin="0,28,0,0" Width="150"/>
+                </StackPanel>
+                
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200*" />
+                    <ColumnDefinition Width="100*" />
+                    <ColumnDefinition Width="100*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" >
+                    <Label Name="Genres" Content="Genres" HorizontalAlignment="Center" />
+                    <RadioButton Name="Fantasy" Content="Fantasy" Margin="60,0,0,0" Click="Fantasy_Click"/>
+                    <RadioButton Name="Historical" Content="Historical" Margin="60,5,0,0" Click="Historical_Click"/>
+                    <RadioButton Name="Philosophy" Content="Philosophy" Margin="60,5,0,0" Click="Philosophy_Click"/>
+                    <RadioButton Name="Science_fiction" Content="Science fiction" Margin="60,5,0,0" Click="Science_fiction_Click"/>
+                    <RadioButton Name="Fairy_tale" Content="Fairy tale" Margin="60,5,0,0" Click="Fairy_tale_Click"/>
+                    <RadioButton Name="Science" Content="Science" Margin="60,5,0,0" Click="Science_Click"/>
+                    <RadioButton Name="Western" Content="Western" Margin="60,5,0,0" Click="Western_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" >
+                    <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Center" Margin="0,150,0,0" Width="50" Click="Cancel_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" >
+                    <Button Name="OK" Content="OK" HorizontalAlignment="Center" Margin="0,150,0,0" Width="50" Click="OK_Click"/>
+                </StackPanel>
+                
+            </Grid>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
