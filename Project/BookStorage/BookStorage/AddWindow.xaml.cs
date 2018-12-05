@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,14 @@ namespace BookStorage
         private static string genre;
         private static DBManager db;
         private  ListBox listBox;
-        public AddWindow(DBManager _db, ref ListBox listBox)
+        private ComboBox userNameBox;
+        string filepath;
+        public AddWindow(DBManager _db, ref ListBox listBox, ref ComboBox userNameBox)
         {
             InitializeComponent();
             db = _db;
             this.listBox = listBox;
+            this.userNameBox = userNameBox;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -54,8 +58,11 @@ namespace BookStorage
             Book.DataAdd = DateTime.Now;
             Book.BookName = BookNameBox.Text;
             Book.Signification = SignificationBox.Text;
-            db.AddElement(Book);
+            userNameBox.Items.Add(SignificationBox.Text);
+            Book.Path = filepath;
             listBox.Items.Add(Book);
+            db.AddElement(Book);
+            
             Close();
         }
 
@@ -92,6 +99,30 @@ namespace BookStorage
         private void Western_Click(object sender, RoutedEventArgs e)
         {
             genre = Western.Content.ToString();
+        }
+
+        private void chooseBookBttn_Click(object sender, RoutedEventArgs e)
+        {
+            string pathToBook = "";
+            string filename = "";
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Filter = "Text documents (.txt)|*.txt";
+                if (dlg.ShowDialog() == true)
+                {
+                    filename = dlg.SafeFileName;
+                    pathToBook = System.IO.Path.GetFullPath(dlg.FileName);
+                    if (!System.IO.Directory.Exists(@"E:\StorageBook\"))
+                        System.IO.Directory.CreateDirectory(@"E:\StorageBook\");
+                    System.IO.File.Copy(pathToBook, @"E:\StorageBook\" + filename);
+                    this.filepath = @"E:\StorageBook\" + filename;
+                    OK.IsEnabled = true;
+                }
+            } catch (Exception ex)
+            {
+
+            }
         }
     }
 }

@@ -16,7 +16,8 @@ namespace BookStorage
         public SQLiteConnection CreateDB(string filename, bool parse)
         {
             db = new SQLiteConnection(filename, parse); 
-            if(db.Table<Book>().Count() != 0) db.CreateTable<Book>();
+            db.CreateTable<Book>();
+            //  if(db.Table<Book>().Count() != 0)
             return db;
         }
         public void AddElement(Book elem)

@@ -39,7 +39,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200*" />
                     <ColumnDefinition Width="100*" />
-                    <ColumnDefinition Width="100*" />
+                    <ColumnDefinition Width="80*" />
+                    <ColumnDefinition Width="120*" />
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" >
@@ -58,9 +59,12 @@
                 </StackPanel>
 
                 <StackPanel Grid.Column="2" >
-                    <Button Name="OK" Content="OK" HorizontalAlignment="Center" Margin="0,150,0,0" Width="50" Click="OK_Click"/>
+                    <Button Name="OK" Content="OK" HorizontalAlignment="Center" Margin="0,150,0,0" Width="50" Click="OK_Click" IsEnabled="False"/>
                 </StackPanel>
-                
+
+                <StackPanel Grid.Column="3" >
+                    <Button Name="chooseBookBttn" Content="Choose book" HorizontalAlignment="Center" Margin="0,150,0,0" Width="80" Click="chooseBookBttn_Click"/>
+                </StackPanel>
             </Grid>
         </StackPanel>
         

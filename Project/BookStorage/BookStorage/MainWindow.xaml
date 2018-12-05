@@ -32,7 +32,7 @@
                 <StackPanel Grid.Column="0">
                     <Label x:Name="UserName" Content="UserName" HorizontalAlignment="Center"  />
                     <ComboBox x:Name="UserNameBox" Width="125" HorizontalAlignment="Center">
-                        <ComboBoxItem Content="None" />
+                        <ComboBoxItem Content="" />
                     </ComboBox>
                     <Label x:Name="Genre" Content="Genre" HorizontalAlignment="Center" Margin="0,40,0,0"/>
                     <ComboBox x:Name="GenreBox" Width="125" HorizontalAlignment="Center">

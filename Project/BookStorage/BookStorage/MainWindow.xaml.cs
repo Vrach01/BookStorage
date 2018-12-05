@@ -37,7 +37,7 @@ namespace BookStorage
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            var addWindow = new AddWindow(db, ref BookList);
+            var addWindow = new AddWindow(db, ref BookList, ref UserNameBox);
             addWindow.Owner = this;
             addWindow.ShowDialog();
         }
@@ -111,7 +111,7 @@ namespace BookStorage
                         ((ComboBoxItem)GenreBox.SelectedValue).Content.ToString() == book.Genre)
                     {
                         if( UserNameBox.SelectedValue == null || 
-                            UserNameBox.SelectedValue.ToString() == "None" ||
+                            UserNameBox.SelectedValue.ToString() == String.Empty ||
                             UserNameBox.SelectedValue.ToString() == book.Signification)
                             BookList.Items.Add(book);
                     }
@@ -152,8 +152,11 @@ namespace BookStorage
             var result = MessageBox.Show(message, caption, buttons, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                db.DeleteElement(((Book)BookList.SelectedItem));
+                string filename = ((Book)BookList.SelectedItem).Path;
+                System.IO.File.Delete(filename);
+                db.DeleteElement((Book)BookList.SelectedItem);
                     BookList.Items.Remove(BookList.SelectedItem);
+                
 
             }
             else if(result == MessageBoxResult.No)
